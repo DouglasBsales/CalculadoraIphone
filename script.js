@@ -463,19 +463,12 @@ function exibirResultado() {
   let exibirNumbers = document.getElementById("exibirNumbers");
   console.log(exibirNumbers.textContent);
 
-  if (exibirNumbers.textContent.includes("-")) {
-    exibirNumbers.textContent = eval(exibirNumbers.textContent);
-  }
-
-  if (exibirNumbers.textContent.includes("+")) {
-    exibirNumbers.textContent = eval(exibirNumbers.textContent);
-  }
-
-  if (exibirNumbers.textContent.includes("*")) {
-    exibirNumbers.textContent = eval(exibirNumbers.textContent);
-  }
-
-  if (exibirNumbers.textContent.includes("/")) {
+  if (
+    exibirNumbers.textContent.includes("-") ||
+    exibirNumbers.textContent.includes("+") ||
+    exibirNumbers.textContent.includes("*") ||
+    exibirNumbers.textContent.includes("/")
+  ) {
     exibirNumbers.textContent = eval(exibirNumbers.textContent);
   }
 }
